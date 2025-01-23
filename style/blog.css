@@ -67,6 +67,9 @@ nav.title{
     font-weight: 600;
     font-size: 1.25rem;
 }
+.hum{
+    display: none;
+}
 
 /* Banner-related-style */
 .navbar, .banner{
@@ -182,9 +185,9 @@ main{
 .our-story{
 text-align: center;
 background:linear-gradient(to top,#eebb69,white), url("../images/bg.png");
-    /* max-wisdth: 1440px; */
+    max-width: 1440px;
     height: 1018px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .story-title{
     text-align: center;
@@ -216,6 +219,7 @@ background:linear-gradient(to top,#eebb69,white), url("../images/bg.png");
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     gap:30px;
+    max-width: 600px;
     
 }
 .box-container2 > div{
@@ -267,20 +271,28 @@ background:linear-gradient(to top,#eebb69,white), url("../images/bg.png");
     padding: 100px 100px;
     
 }
+.footer-logo{
+    filter: brightness(100%) invert(1);
+}
 
 @media screen and (max-width: 576px) {
     .navbar{
         border-bottom: 1px solid blueviolet;
     }
-    .school, .nav-links{
-        display: block;
-        visibility: hidden;
+    .school, .nav-links, .nav-btn{
+        display: block; 
+        visibility: hidden;  
+    }
+    .hum{
+        display: inline;
         
     }
     
     .banner{
         flex-direction: column;
         flex-direction: column-reverse;
+        justify-items: center;
+        margin: 0 auto;
         
         }
         .banner-img{
@@ -296,25 +308,27 @@ background:linear-gradient(to top,#eebb69,white), url("../images/bg.png");
         }
         .card-name{
         font-weight: 600;
-        font-size: 2rem;
-            
-        }
-        .box-container{
-            flex-direction: column;
-            width: auto;
-            height: auto;
+        font-size: 2rem;}
 
+        .our-story{
+            width:fit-content;
         }
+             
         .box1{
             display: none;
         }
+
         .box-container2{
             grid-template-columns: repeat(2, 1fr);
-            width: 100%;
+            width: 50%;
             height:auto;
+            gap:5px;
         }
         .main-footer{
             flex-direction: column;
+            
+        }
+        .footer{
             height: auto;
         }
 }
